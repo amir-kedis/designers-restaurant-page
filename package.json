@@ -31,5 +31,8 @@
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
     "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
   }
 }
