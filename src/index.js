@@ -1,5 +1,8 @@
 // import styles
-import "reset-css"
+import "reset-css";
 import "./style/global.scss";
-import "./components/header/header.scss"
+import createHeader from "./components/header/header";
 
+const header = createHeader();
+
+document.querySelector("#content").appendChild(header);
