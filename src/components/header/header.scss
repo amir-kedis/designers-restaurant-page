@@ -1,0 +1,55 @@
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: var(--main-font);
+
+  h1 {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 922px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    nav {
+      flex: 1 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+
+      @media (max-width: 922px) {
+        gap: 0px;
+      }
+
+      a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: inherit;
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 5px 33px;
+        transition: transform 0.1s ease-out;
+
+        @media (max-width: 922px) {
+          padding: 5px 15px;
+        }
+
+        &.active {
+          border: 3px solid #000;
+          background-color: var(--green-color);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
