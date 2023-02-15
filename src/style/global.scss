@@ -5,14 +5,14 @@
 // global rules
 *,
 *::before,
-**::after {
+*::after {
   box-sizing: border-box;
 }
 
 :root {
   --main-font: "Bebas Neue", cursive;
   --secondary-font: "Inria Sans", sans-serif;
-  --green-color: #50FEB0;
+  --green-color: #50feb0;
 }
 
 // global and util classes

@@ -1,4 +1,4 @@
-import "./header.scss"
+import "./header.scss";
 
 export default function createHeader() {
   const header = document.createElement("header");
@@ -21,10 +21,14 @@ export default function createHeader() {
     const linkEl = document.createElement("a");
     linkEl.href = link[0];
     linkEl.textContent = link[1];
-    
+
     if (link[2]) {
       linkEl.classList.add(link[2]);
     }
+
+    linkEl.addEventListener("click", (e) => {
+      changeContent(e.target);
+    });
 
     nav.appendChild(linkEl);
   });
@@ -35,4 +39,12 @@ export default function createHeader() {
   header.appendChild(container);
 
   return header;
+}
+
+function changeContent(activeLink) {
+  const links = document.querySelectorAll("nav a");
+  links.forEach((link) => {
+    link.classList.remove("active");
+  });
+  activeLink.classList.add("active");
 }

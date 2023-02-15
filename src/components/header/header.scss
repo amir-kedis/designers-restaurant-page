@@ -35,7 +35,8 @@ header {
         font-family: inherit;
         font-size: 1.5rem;
         padding: 5px 33px;
-        transition: transform 0.1s ease-out;
+        transition: all 0.1s ease-out;
+        border: 3px solid transparent;
 
         @media (max-width: 922px) {
           padding: 5px 15px;
