@@ -4,7 +4,9 @@ export default function createHome() {
   const home = document.createElement("main");
   home.classList.add("home");
 
-  home.innerHTML = ``;
+  home.innerHTML = `
+    
+  `;
 
   return home;
 }
