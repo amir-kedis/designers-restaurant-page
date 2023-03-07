@@ -1,14 +1,18 @@
 import "./home.scss";
+import headerImagePath from "./../../assets/header-img.png";
+import greenBlobPath from "./../../assets/green-blob.png";
+import yellowBlobPath from "./../../assets/yellow-blob.png";
+import pinkBlobPath from "./../../assets/pink-blob.png";
+
+import create from "./../../util/create";
+import { createImg } from "./../../util/create";
 
 export default function createHome() {
-  const home = document.createElement("main");
-  home.classList.add("home");
+  const home = create("main", "home", ["home"], "");
 
-  const container = document.createElement("div");
-  container.classList.add("container");
+  const container = create("div", "", ["container"], home);
 
-  const text = document.createElement("div");
-  text.classList.add("text");
+  const text = create("div", "text", ["text"], container);
 
   const textContentArr = [
     "EAT WHAT YOUR HEART DESIRES",
@@ -16,21 +20,47 @@ export default function createHome() {
     "DESIRES",
   ];
 
-  textContentArr.forEach((txt, id) => {
-    const pEl = document.createElement("p");
-    pEl.textContent = txt;
-    text.appendChild(pEl);
+  textContentArr.forEach((txt) => {
+    const pEl = create("p", "", [], text, txt);
   });
 
-  container.appendChild(text);
+  const fancyBtn = create("a", "", ["btn", "btn--fancy"], text, "LET'S EAT");
 
-  const fancyBtn = document.createElement("a");
-  fancyBtn.textContent = "LET'S EAT";
-  fancyBtn.classList.add("btn", "btn--fancy");
+  /// create images part
+  const fancyImage = create("div", "", ["fancy-image"], container);
 
-  text.appendChild(fancyBtn);
-
-  home.appendChild(container);
+  const headerImage = createImg(
+    "img",
+    "header-img",
+    [],
+    fancyImage,
+    headerImagePath,
+    "food image"
+  );
+  const greenBlob = createImg(
+    "img",
+    "greenBlob",
+    [],
+    fancyImage,
+    greenBlobPath,
+    "green blob"
+  );
+  const YellowBlob = createImg(
+    "img",
+    "YellowBlob",
+    [],
+    fancyImage,
+    yellowBlobPath,
+    "yellow blob"
+  );
+  const pinkBlob = createImg(
+    "img",
+    "pinkBlob",
+    [],
+    fancyImage,
+    pinkBlobPath,
+    "yellow blob"
+  );
 
   return home;
 }
