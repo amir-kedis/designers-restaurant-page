@@ -29,6 +29,14 @@ export default function createHome() {
   /// create images part
   const fancyImage = create("div", "", ["fancy-image"], container);
 
+  const greenBlob = createImg(
+    "img",
+    "greenBlob",
+    ["blob-image"],
+    fancyImage,
+    greenBlobPath,
+    "green blob"
+  );
   const headerImage = createImg(
     "img",
     "header-img",
@@ -37,18 +45,10 @@ export default function createHome() {
     headerImagePath,
     "food image"
   );
-  const greenBlob = createImg(
-    "img",
-    "greenBlob",
-    [],
-    fancyImage,
-    greenBlobPath,
-    "green blob"
-  );
   const YellowBlob = createImg(
     "img",
     "YellowBlob",
-    [],
+    ["blob-image"],
     fancyImage,
     yellowBlobPath,
     "yellow blob"
@@ -56,7 +56,7 @@ export default function createHome() {
   const pinkBlob = createImg(
     "img",
     "pinkBlob",
-    [],
+    ["blob-image"],
     fancyImage,
     pinkBlobPath,
     "yellow blob"
