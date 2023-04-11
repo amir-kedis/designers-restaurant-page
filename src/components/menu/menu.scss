@@ -18,7 +18,7 @@ main.menu {
 
   .menu-items {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
     min-height: 40vh;
     flex-wrap: wrap;
@@ -28,30 +28,59 @@ main.menu {
     --pad-inline: 20px;
 
     flex: 1;
-    min-height: 300px;
+    max-width: 260px;
+    aspect-ratio: 4 / 5;
     border: 3px solid #000;
     box-shadow: 4px 4px 0 0 #343434;
     border-radius: 5px;
 
     &__title {
       padding: 15px 20px;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 600;
       letter-spacing: 1px;
       border-bottom: 4px solid #000;
       background-color: var(--green-color);
     }
     &:nth-child(2) {
-
       .card__title {
-      background-color: var(--yellow-color);
+        background-color: var(--yellow-color);
+      }
+      .btn {
+        background-color: #7AF750;
+      }
+    }
+    &:nth-child(3) {
+      .card__title {
+        background-color: #FF90E8;
+      }
+      .btn {
+        background-color: #90EBFF;
       }
     }
 
-    &:nth-child(3) {
-      .card__title {
+    &__headline {
+      font-size: 28px;
+      padding: 15px 20px;
+    }
+
+    &__paragraph {
+      padding: 15px 20px;
+      font-size: 17px;
+      font-family: var(--secondary-font);
+      word-spacing: 2px;
+      text-transform: capitalize;
+    }
+    .btn {
+      font-family: inherit;
       background-color: #FF90E8;
-      }
+      border-radius: 0;
+      font-size: 20px;
+      outline: none;
+      margin: 15px 20px;
+      padding: 3px 22px;
+      transform: rotate(358deg);
+      cursor: pointer;
     }
   }
 }

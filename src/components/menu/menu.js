@@ -19,6 +19,9 @@ export default function createMenu() {
               <h3 class="card__headline">
                 taste the most powerful backer ever
               </h3>
+              <p class="card__paragraph">
+                we have the most delusions  bakery in the world, come and get a free croissant
+              </p>
               <button class="btn card__btn btn--tilted">
                 order now
               </button>
@@ -31,6 +34,9 @@ export default function createMenu() {
               <h3 class="card__headline">
                 taste the most powerful backer ever
               </h3>
+              <p class="card__paragraph">
+                we have the most delusions  bakery in the world, come and get a free croissant
+              </p>
               <button class="btn card__btn btn--tilted">
                 order now
               </button>
@@ -43,6 +49,9 @@ export default function createMenu() {
               <h3 class="card__headline">
                 taste the most powerful backer ever
               </h3>
+              <p class="card__paragraph">
+                we have the most delusions  bakery in the world, come and get a free croissant
+              </p>
               <button class="btn card__btn btn--tilted">
                 order now
               </button>
