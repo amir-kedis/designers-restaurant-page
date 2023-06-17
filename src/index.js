@@ -6,6 +6,7 @@ import createHeader from "./components/header/header";
 import createFooter from "./components/footer/footer";
 import createHome from "./components/home/home";
 import createMenu from "./components/menu/menu";
+import createAbout from "./components/about/about";
 
 // current visible page
 const pages = {
@@ -16,23 +17,19 @@ const pages = {
 
 let currnetPage = pages.HOME;
 
-function changePage(e)
-{
+function changePage(e) {
   console.log(e.target.textContent);
-  
+
   let clickItem = e.target.textContent;
 
-  if (clickItem.toUpperCase() == "HOME")
-  {
-    currnetPage = pages.HOME; 
-  } else if (clickItem.toUpperCase() == "ABOUT US") 
-  { 
-    currnetPage = pages.ABOUT; 
-  } else if (clickItem.toUpperCase() == "MENU")
-  {
+  if (clickItem.toUpperCase() == "HOME") {
+    currnetPage = pages.HOME;
+  } else if (clickItem.toUpperCase() == "ABOUT US") {
+    currnetPage = pages.ABOUT;
+  } else if (clickItem.toUpperCase() == "MENU") {
     currnetPage = pages.MENU;
   } else {
-    currnetPage = pages.HOME; 
+    currnetPage = pages.HOME;
   }
 }
 
@@ -41,44 +38,38 @@ function render() {
   const contentDiv = document.querySelector('#content');
 
   // remove existing divs if they exist 
-  if (contentDiv.querySelector('main'))
-  {
+  if (contentDiv.querySelector('main')) {
     contentDiv.removeChild(contentDiv.querySelector('main'));
   }
-  
-  if (contentDiv.querySelector('footer'))
-  {
+
+  if (contentDiv.querySelector('footer')) {
     contentDiv.removeChild(contentDiv.querySelector('footer'));
   }
 
-  
+
   const footer = createFooter();
-  
+
   let header = contentDiv.querySelector('header');
 
-  if (!header)
-  {
+  if (!header) {
     header = createHeader();
     contentDiv.appendChild(header);
-  
 
-  // add event listner
-  const links = header.querySelectorAll('a');
 
-  console.log(links);
+    // add event listner
+    const links = header.querySelectorAll('a');
 
-  [...links].forEach(link => {
-    console.log(link);
-    link.addEventListener('click', (e) => {
-      changePage(e);
-      render();
-    }); 
-  });
+    [...links].forEach(link => {
+      console.log(link);
+      link.addEventListener('click', (e) => {
+        changePage(e);
+        render();
+      });
+    });
 
   }
 
-  switch (currnetPage)
-  {
+  switch (currnetPage) {
     case pages.HOME:
       const home = createHome();
       contentDiv.appendChild(home);
@@ -88,11 +79,10 @@ function render() {
       contentDiv.appendChild(menu);
       break;
     case pages.ABOUT:
-      // TODO: uncomment latter
-//      const about = createAbout();
-//      contentDiv.appendChild(about);
+      const about = createAbout();
+      contentDiv.appendChild(about);
       break;
-    default: 
+    default:
       const homeD = createHome();
       contentDiv.appendChild(homeD);
       break;

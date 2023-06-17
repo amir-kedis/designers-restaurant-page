@@ -21,7 +21,7 @@ export default function createHome() {
   ];
 
   textContentArr.forEach((txt) => {
-    const pEl = create("p", "", [], text, txt);
+    create("p", "", [], text, txt);
   });
 
   const fancyBtn = create("a", "", ["btn", "btn--fancy"], text, "LET'S EAT");
