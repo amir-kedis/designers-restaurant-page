@@ -24,12 +24,12 @@ export default function createHome() {
     create("p", "", [], text, txt);
   });
 
-  const fancyBtn = create("a", "", ["btn", "btn--fancy"], text, "LET'S EAT");
+  create("a", "", ["btn", "btn--fancy"], text, "LET'S EAT");
 
   /// create images part
   const fancyImage = create("div", "", ["fancy-image"], container);
 
-  const greenBlob = createImg(
+  createImg(
     "img",
     "greenBlob",
     ["blob-image"],
@@ -37,7 +37,7 @@ export default function createHome() {
     greenBlobPath,
     "green blob"
   );
-  const headerImage = createImg(
+  createImg(
     "img",
     "header-img",
     [],
@@ -45,7 +45,7 @@ export default function createHome() {
     headerImagePath,
     "food image"
   );
-  const YellowBlob = createImg(
+  createImg(
     "img",
     "YellowBlob",
     ["blob-image"],
@@ -53,7 +53,7 @@ export default function createHome() {
     yellowBlobPath,
     "yellow blob"
   );
-  const pinkBlob = createImg(
+  createImg(
     "img",
     "pinkBlob",
     ["blob-image"],

@@ -18,8 +18,6 @@ const pages = {
 let currnetPage = pages.HOME;
 
 function changePage(e) {
-  console.log(e.target.textContent);
-
   let clickItem = e.target.textContent;
 
   if (clickItem.toUpperCase() == "HOME") {
@@ -60,7 +58,6 @@ function render() {
     const links = header.querySelectorAll('a');
 
     [...links].forEach(link => {
-      console.log(link);
       link.addEventListener('click', (e) => {
         changePage(e);
         render();
