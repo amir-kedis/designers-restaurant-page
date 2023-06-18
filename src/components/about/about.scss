@@ -1,0 +1,117 @@
+.about-us
+{
+  text-align: center;
+
+  .container {
+    text-align: center;
+  }
+  .fancy-headline {
+    font-family: var(--main-font);
+    font-size: 4 * 8px;
+    text-align: center;
+    padding: (2* 8px) (8px * 8);
+    color: #FFFFFF;
+    background-color: #000;
+    display: inline-flex;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .imageGrid {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  .imageBox {
+    flex: 1 1 auto;
+  }
+  .blob {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    aspect-ratio: 1/1;
+
+    &-0 {
+      top: 27%;
+      left: 4%;
+    }
+
+    &-1 {
+      top: 59%;
+      left: 29%;
+    z-index: -1;}
+
+
+    &-2 {
+      top: 31%;
+    left: 35%;   }
+
+    &-3 {
+      top: 64%;
+      left: 44%;
+      z-index: -1;
+
+    }
+
+    &-4 {
+      top: 61%;
+      left: 62%;
+    }
+
+    &-5 {
+      top: 26%;
+      left: 82%;
+    z-index: -1;   }
+
+    &-6 {
+      top: 61%;
+      left: 84%;
+    }
+
+    &-7 {
+      top: 11%;
+      left: 11%;
+      transform: rotate(320deg);
+      z-index: -1;
+    }
+  }
+
+  .btnContainer {
+    display: inline-flex;
+    position: relative;
+    margin: 3rem 3rem 3rem 0rem;
+    .btn {
+      display: inline-block;
+      color: inherit;
+      text-decoration: inherit;
+      font-family: inherit;
+      font-size: 1.5rem;
+      padding: 5px 33px;
+      transition: all 0.1s ease-out;
+      font-family: var(--main-font);
+      width: 100%;
+      border: 3px solid;
+      box-shadow: 1px 1px 0 #000;
+      background-color: #90B6FF;
+      transform: rotate(353deg);
+      cursor: pointer;
+
+    }
+
+    .arrow {
+      position: absolute;
+      width: 100px;
+      height: auto;
+      left: 107%;
+      top: -48%;
+    }
+  }
+}

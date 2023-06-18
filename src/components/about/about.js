@@ -1,3 +1,6 @@
+// Styles
+import './about.scss'
+
 // MENU images
 import image_1 from "../../assets/US1.png"
 import image_2 from "../../assets/US2.png"
